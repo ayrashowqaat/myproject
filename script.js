@@ -114,8 +114,22 @@ function touchMove(e) {
 }
 
 function touchEnd(e) {
+  if (!dragged) return;
+
   dragged.style.position = '';
   dragged.style.left = '';
   dragged.style.top = '';
   dragged.style.zIndex = '';
+
+  // This finds the spot where you lifted your finger
+  const touch = e.changedTouches[0];
+  const dropTarget = document.elementFromPoint(touch.clientX, touch.clientY);
+
+  // If it's a puzzle slot and it's empty, drop the piece there
+  if (dropTarget && dropTarget.classList.contains('puzzle-slot') && dropTarget.children.length === 0) {
+    dropTarget.appendChild(dragged);
+    checkWin(); // Check if the puzzle is finished
+  }
+
+  dragged = null;
 }
