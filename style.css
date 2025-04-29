@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', serif; /* Times New Roman font */
+  background-color: #f7c6d9; /* Pinterest-y pink */
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.landing-screen {
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box shadow */
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.3s ease-in-out; /* Transition for button hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Hover effect with box shadow */
+}
+
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+  padding: 5px 10px;
+}
+
+.puzzle-box {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: 2px dashed #000;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+
+.pieces {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.puzzle-piece {
+  width: 100px;
+  height: 100px;
+  background-image: url('heartt.png');
+  background-size: 300px 300px;
+  border: 1px solid black;
+  cursor: grab;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+
+.puzzle-slot {
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #333;
+  box-sizing: border-box;
+}
+
+.win-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+}
